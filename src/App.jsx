@@ -4,7 +4,7 @@ import Search from "./components/Search";
 import { apiKey } from "./components/config.js";
 
 function App() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Sydney");
   return (
     <>
       <Search setCity={setCity} />
