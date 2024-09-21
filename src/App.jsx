@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Api from "./components/api";
 import Search from "./components/Search";
+import { apiKey } from "./components/config.js";
 
 function App() {
   const [city, setCity] = useState("");
   return (
     <>
       <Search setCity={setCity} />
-      <Api city={city} />
+      <Api city={city} apiKey={apiKey} />
     </>
   );
 }
