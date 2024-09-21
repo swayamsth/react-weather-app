@@ -1,7 +1,13 @@
+import { useState } from "react";
+import Api from "./components/api";
+import Search from "./components/Search";
+
 function App() {
+  const [city, setCity] = useState("");
   return (
     <>
-      <h1>Hello, world!</h1>
+      <Search setCity={setCity} />
+      <Api city={city} />
     </>
   );
 }
