@@ -4,9 +4,9 @@ const Search = ({ setCity }) => {
   const [search, setSearch] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(search);
     setCity(search);
   }
+
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
       <div>
