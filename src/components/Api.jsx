@@ -1,21 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Output from "./Output";
 
 const Api = ({ city, apiKey }) => {
+  const [readings, setReadings] = useState({});
   const currentDate = new Date().toISOString().slice(0, 10);
   const URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline`;
 
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `${URL}/${city}/${currentDate}?key=${apiKey}`
+        `${URL}/${city}/${currentDate}?unitGroup=metric&key=${apiKey}`
       );
       const data = await response.json();
-      console.log(data);
+      setReadings(data);
     }
     fetchData();
   }, [city]);
 
-  return <div>{city}</div>;
+  console.log(readings);
+
+  return (
+    <div>
+      <Output readings={readings} />
+    </div>
+  );
 };
 
 export default Api;
