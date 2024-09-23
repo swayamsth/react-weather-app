@@ -1,0 +1,38 @@
+.forecastContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px;
+  width: 60rem;
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+
+  img {
+    width: 3.5rem;
+    height: auto;
+  }
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tempContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.tempContainer p,
+.currentDate {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #1b2021;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+}
