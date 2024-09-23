@@ -4,7 +4,6 @@ import RenderIcon from "./RenderIcon";
 
 const Forecast = ({ readings }) => {
   const days = readings.days;
-  console.log(days);
 
   return (
     <div>
