@@ -32,10 +32,25 @@ function App() {
     fetchData();
   }, [city]);
 
+  if (!readings) {
+    return <div>Loading...</div>;
+  }
+
   console.log(readings);
 
   return (
     <>
+      {readings.days.map((day, index) => {
+        if (day.datetime === readings.days[index].datetime) {
+          const sunrise = day.sunrise.slice(0, 2);
+          const sunset = day.sunset.slice(0, 2);
+          if (currentTime < sunrise || currentTime > sunset) {
+            console.log("night");
+          } else {
+            console.log("day");
+          }
+        }
+      })}
       <Search setCity={setCity} />
       <Output readings={readings} currentTime={currentTime} />
     </>
