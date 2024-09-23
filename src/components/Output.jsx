@@ -2,12 +2,7 @@ import React from "react";
 import styles from "./output.module.css";
 
 const Output = ({ readings }) => {
-  if (
-    !readings ||
-    !readings.currentConditions ||
-    !readings.days ||
-    readings.days.length === 0
-  ) {
+  if (!readings || !readings.days || readings.days.length === 0) {
     return <div className={styles.loading}>Loading weather data...</div>;
   }
   return (
@@ -16,14 +11,12 @@ const Output = ({ readings }) => {
         <div>
           <h1 className={styles.cityAddress}>{readings.address}</h1>
           <h1 className={styles.cityConditions}>
-            {readings.currentConditions.conditions}
+            {readings.days[0].conditions}
           </h1>
         </div>
         Icons
         <div>
-          <h1 className={styles.currentTemp}>
-            {readings.currentConditions.temp}°C
-          </h1>
+          <h1 className={styles.currentTemp}>{readings.days[0].temp}°C</h1>
           <div className={styles.tempContainer}>
             <h3 className={styles.tempMin}>L:{readings.days[0].tempmin}°</h3>
             <h3 className={styles.tempMax}>H:{readings.days[0].tempmax}°</h3>
