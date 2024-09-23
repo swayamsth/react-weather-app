@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./output.module.css";
+import RenderIcon from "./RenderIcon";
 
 const Output = ({ readings }) => {
   if (!readings || !readings.days || readings.days.length === 0) {
@@ -14,7 +15,7 @@ const Output = ({ readings }) => {
             {readings.days[0].conditions}
           </h1>
         </div>
-        Icons
+        <RenderIcon icon={readings.days[0].icon} />
         <div>
           <h1 className={styles.currentTemp}>{readings.days[0].temp}°C</h1>
           <div className={styles.tempContainer}>
