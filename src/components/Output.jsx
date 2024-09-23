@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./output.module.css";
 import RenderIcon from "./RenderIcon";
+import Forecast from "./Forecast";
 
 const Output = ({ readings }) => {
   if (!readings || !readings.days || readings.days.length === 0) {
@@ -25,6 +26,7 @@ const Output = ({ readings }) => {
         </div>
       </div>
       <div className={styles.readingDesc}>{readings.days[0].description}</div>
+      <Forecast readings={readings} />
     </div>
   );
 };
