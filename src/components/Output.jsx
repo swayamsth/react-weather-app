@@ -3,15 +3,7 @@ import styles from "./output.module.css";
 import RenderIcon from "./RenderIcon";
 import Forecast from "./Forecast";
 
-const Output = ({ readings }) => {
-  function roundToHour(date) {
-    const p = 60 * 60 * 1000;
-    return new Date(Math.round(date.getTime() / p) * p);
-  }
-
-  const date = new Date();
-  const currentTime = roundToHour(date).toString().slice(16, 18);
-
+const Output = ({ readings, currentTime }) => {
   if (!readings || !readings.days || readings.days.length === 0) {
     return <div className={styles.loading}>Loading weather data...</div>;
   }

@@ -13,6 +13,14 @@ function App() {
     .slice(0, 10);
   const URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline`;
 
+  const date = new Date();
+  const currentTime = roundToHour(date).toString().slice(16, 18);
+
+  function roundToHour(date) {
+    const p = 60 * 60 * 1000;
+    return new Date(Math.round(date.getTime() / p) * p);
+  }
+
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
@@ -29,7 +37,7 @@ function App() {
   return (
     <>
       <Search setCity={setCity} />
-      <Output readings={readings} />
+      <Output readings={readings} currentTime={currentTime} />
     </>
   );
 }
