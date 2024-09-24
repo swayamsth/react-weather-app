@@ -38,3 +38,43 @@
   color: #1b2021;
   font-size: 1.5rem;
 }
+
+@media (max-width: 768px) {
+  .searchBox {
+    width: 20rem;
+  }
+
+  .searchInput {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .searchBox {
+    width: 15rem;
+  }
+
+  .searchInput {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .searchBox {
+    width: 10rem;
+  }
+
+  .searchInput {
+    font-size: 0.625rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .searchBox {
+    width: 8rem;
+  }
+
+  .searchInput {
+    font-size: 0.5rem;
+  }
+}

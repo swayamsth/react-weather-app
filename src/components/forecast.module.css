@@ -36,3 +36,87 @@
   color: #1b2021;
   text-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+  .forecastContainer {
+    width: 40rem;
+
+    img {
+      width: 3rem;
+      height: auto;
+    }
+  }
+
+  .tempContainer p,
+  .currentDate {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .forecastContainer {
+    width: 30rem;
+
+    img {
+      width: 2.5rem;
+      height: auto;
+    }
+  }
+
+  .tempContainer p,
+  .currentDate {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .forecastContainer {
+    width: 22.5rem;
+
+    img {
+      width: 2rem;
+      height: auto;
+    }
+  }
+
+  .tempContainer {
+    gap: 2px;
+  }
+
+  .tempContainer p,
+  .currentDate {
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .forecastContainer {
+    width: 20rem;
+
+    img {
+      width: 1.5rem;
+      height: auto;
+    }
+  }
+
+  .tempContainer p,
+  .currentDate {
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .forecastContainer {
+    width: 15rem;
+
+    img {
+      width: 1rem;
+      height: auto;
+    }
+  }
+
+  .tempContainer p,
+  .currentDate {
+    font-size: 0.3rem;
+  }
+}

@@ -65,3 +65,177 @@
   margin-top: 50px;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .cityAddress {
+    margin-top: 100px;
+    font-size: 1.5rem;
+  }
+
+  .cityConditions {
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+
+  .currentTemp {
+    font-size: 2rem;
+    margin-top: 100px;
+  }
+
+  .tempMax,
+  .tempMin {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  .readingDesc {
+    font-size: 1rem;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+
+  .cityAddress,
+  .cityConditions {
+    margin-right: 10vw;
+  }
+
+  .cityAddress {
+    margin-top: 50px;
+    font-size: 1.25rem;
+  }
+
+  .cityConditions {
+    margin-top: 6px;
+    font-size: 0.875rem;
+  }
+
+  .currentTemp {
+    font-size: 1.5rem;
+    margin-top: 75px;
+  }
+
+  .tempMax,
+  .tempMin {
+    margin-top: 8px;
+    font-size: 0.875rem;
+  }
+
+  .readingDesc {
+    font-size: 0.875rem;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 425px) {
+  .mainContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cityAddress {
+    margin-top: 25px;
+    font-size: 1rem;
+  }
+
+  .cityConditions {
+    margin-top: 4px;
+    font-size: 0.75rem;
+  }
+
+  .currentTemp {
+    font-size: 1.25rem;
+    margin-top: 50px;
+  }
+
+  .tempMax,
+  .tempMin {
+    margin-top: 6px;
+    font-size: 0.75rem;
+  }
+
+  .readingDesc {
+    font-size: 0.75rem;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .mainContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cityAddress,
+  .cityConditions {
+    margin-right: 12vw;
+  }
+
+  .cityAddress {
+    margin-top: 25px;
+    font-size: 1rem;
+  }
+
+  .cityConditions {
+    margin-top: 4px;
+    font-size: 0.75rem;
+  }
+
+  .currentTemp {
+    font-size: 1.25rem;
+    margin-top: 50px;
+  }
+
+  .tempMax,
+  .tempMin {
+    margin-top: 6px;
+    font-size: 0.75rem;
+  }
+
+  .readingDesc {
+    font-size: 0.75rem;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .mainContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cityAddress,
+  .cityConditions {
+    margin-right: 12vw;
+  }
+
+  .cityAddress {
+    margin-top: 25px;
+    font-size: 1rem;
+  }
+
+  .cityConditions {
+    margin-top: 4px;
+    font-size: 0.75rem;
+  }
+
+  .currentTemp {
+    font-size: 1.25rem;
+    margin-top: 50px;
+  }
+
+  .tempMax,
+  .tempMin {
+    margin-top: 6px;
+    font-size: 0.75rem;
+  }
+
+  .readingDesc {
+    font-size: 0.75rem;
+    margin-top: 20px;
+  }
+}
